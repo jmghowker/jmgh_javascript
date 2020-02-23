@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>setInterval and setTimeout</title>
+    </head>
+    <body>
+    <p id="counter">0</p>
+        <button onclick="clearInterval(myCounter)">Stop counting.</button>
+<!--        this code can be used to set a delay for instance, loading a page and after  set amount of time a message pops up for instance or a counter that goes up every second etc-->
+    <br />
+    <button onclick="clearTimeout(delayedWelcomeMessage)">Avoid Welcome Message</button>
+    <script>
+    var counter = document.getElementById("counter");
+    var x = 0;
+    var myCounter = setInterval(function(){x++;counter.innerHTML = x},1000);
+//    time interval in milliseconds is the 1000
+//        setInterval is used to start a timing event/timer and a clearInterval (above) is used to stop the event
+        
+    var delayedWelcomeMessage = setTimeout(function(){window.alert("Welcome to our page")},3000);
+//        above code setTimeout is used to create a delay so at 3 seconds after loading the page our message pops up
+        
+        
+        </script>
+    
+    
+    
+    
+    </body>
+    
+    
+    
+    </html>

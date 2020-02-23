@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>cookies</title>
+<!--    a piece of information that's going to be stored in the user's computer in a text file/document that will help remember things when the user returns to that page eg username-->
+    </head>
+    <body>
+    <p id="myParagraph">Javascript</p>
+    <script>
+    document.cookie = "username = buenosdias";
+    document.cookie = "age = 33";
+    document.cookie = "country = Spain";
+//    window.alert(document.cookie);
+        
+    var cookie = document.cookie.split(";");
+//        window.alert(cookie);
+        
+    for(i=0; i<cookie.length; i++){
+        document.getElementById("myParagraph").innerHTML += "<br />" + cookie[i];
+    }
+        
+        
+        </script>
+    
+<!--    after deleting our code in the script section and then creating a window alert window.alert(document.cookie); the above saved information showed up as it was saved-->
+    
+    
+    </body>
+    
+    
+    
+    </html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Regular Expressions/RegEx</title>
+    </head>
+    <body>
+    <p>String: <span id="string"></span></p>
+    <p>Pattern: <span id="pattern"></span></p>
+    <p>Result(search): <span id="search"></span></p>
+    <p>Result(match): <span id="match"></span></p>
+    <p>Result(test): <span id="test"></span></p>
+<!--        regular expressions used to look for a regular pattern in string - like a user input e.g uppercase letter etc-->
+    <script>
+       var str = "Atlanta \n578 375%";
+//        var pattern = /[^atn]/g; 
+//        var pattern = /[4-7]/g;
+//          var pattern =/\d/g; 
+//          var pattern =/\w/g;
+//        var pattern =/\W/g;
+//        var pattern = /\s/g;
+//        var pattern =/\d{4}/g;
+//        var pattern = /^A/g;
+        var pattern = /\n/g;
+//        to see if we have a line break we can use /\n/
+//        to see if we have a capital A at the beginning /^A/g;
+//        to look for more than one digit use the digit method but in curly brackets at the number of digits you're looking for
+//        to search for a space use /\s/
+//        changing to a capital W searches for all characters besides alphanumeric
+//        to search for any alphanumeric characters can use /\w/. so special characters and symbols won't be counted
+//        to search for any digits at all can use /\d/
+//        using the ^ symbol means search for all characters besides these ones in the brackets e.g atn
+//        var pattern = /[a-z]/g; searching fo all letters between a and z lowercase will only show results
+//        var = new RegExp("a","g"); another way like var pattern
+        
+        document.getElementById("string").innerHTML =
+            str;
+        document.getElementById("pattern").innerHTML =
+            pattern;
+        document.getElementById("search").innerHTML =
+            str.search(pattern);
+        document.getElementById("match").innerHTML =
+            str.match(pattern);
+        document.getElementById("test").innerHTML =
+            pattern.test(str);
+        
+//        var pattern = /a/i; -- this comes back with 0 as the first A of any a is index number 0
+//        use global search 'g' so it picks up the first lowercase a bc we are cancelling out the first A as it is capital and then the window alert comes back with '3' bc the a is number 3 index (0,1,2,3,etc)
+//        window.alert(str.search(pattern));
+//        window.alert(str.match(pattern));
+//        using the i modifier above comes back with A in the alert message when using str.match as it is the exact letter. Change this to g and it comes back with all instances of an 'a' as this time it is case sensitive so a,a bc there is 2 lowercase a in the word
+        
+//        window.alert(pattern.test(str));
+//        this time we use a method with the pattern .test and we get back 'true'/boolean in the alert message
+        
+        
+        </script>
+    
+    
+    
+    
+    </body>
+    
+    
+    
+    </html>

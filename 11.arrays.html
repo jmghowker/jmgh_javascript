@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>arrays</title>
+    </head>
+    <body>
+    <p id="myParagraph">Javascript</p>
+    <script>
+       var shoppingList = ["bread", "eggs", "milk"];
+        
+//            var shoppingList = new Array("bread", "eggs", "milk");
+        showResult(shoppingList);
+        showResult(shoppingList[0]);
+        showResult(shoppingList[2]);
+        
+//        document.getElementById("myParagraph").innerHTML += "<br />" + shoppingList[0];
+    
+//        document.getElementById("myParagraph").innerHTML += "<br />" + shoppingList[2];
+        
+        function showResult(x){
+              document.getElementById("myParagraph").innerHTML += "<br />" + x;
+        }
+        
+        shoppingList[1] = "yoghurt";
+        showResult(shoppingList);
+        shoppingList[2] = "orange";
+        showResult(shoppingList);
+        
+//        above shows how to change an item in the array
+        
+        delete shoppingList[1];
+        showResult(shoppingList);
+//still shows two commas like it was there after deleting
+        
+        shoppingList[1] = "yoghurt";
+        showResult(shoppingList);
+        shoppingList.splice(1,1);
+        showResult(shoppingList);
+        
+//        the splice function deletes but doesn't leave 2 commas like the delete function. splice(1,1) is selecting item/index 1 and deleteing 1 item which is just itself'
+        
+        shoppingList.splice(1,0,"banana", "apple");
+        showResult(shoppingList);
+//        splice function used to add items. Showing starting from index 1, then saying not deleting anything, then adding the new items.
+        
+        shoppingList.sort();
+        showResult(shoppingList);
+        
+//    shows in alphabetical order using sort function 
+        
+        shoppingList.reverse();
+        showResult(shoppingList);
+//        in reverse alphabetical order
+        
+        var myString = "what is the weather like?";
+        var myArray = myString.split(' ',2);
+        showResult(myArray);
+//        strings in array, whenever there is a space it creates a new item in the array a word is an item and so is a space so it shows up as a comma
+//        adding a number gives the maximum of items we want to show in the array 
+        
+        </script>
+    
+    
+    
+    
+    </body>
+    
+    
+    
+    </html>

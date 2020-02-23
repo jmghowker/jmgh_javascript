@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>while loop</title>
+    </head>
+    <body>
+    <p id="myParagraph">Javascript</p>
+        <button onclick="initiateGame()">Start</button>
+        <div id="balance">Current Balance: $1000</div> 
+<!--is a div and not a p because shouldnt insert a paragraph in another paragraph-->
+    <script>
+//        while loops - execute a piece of code whilst a certain condition is true
+//        condition between () and then in{} is code
+        var i =0;
+        while(i<5){
+              document.getElementById("myParagraph").innerHTML += "<br />" + i;
+            i++;
+        }
+       
+        function initiateGame(){
+            
+        
+        
+        var balance = 1000;
+        var itemsBought = 0;
+        while(balance>0){
+              var itemPrice = Math.floor(Math.random()*100);
+            if(itemPrice <= balance){
+                itemsBought += 1;
+                balance -= itemPrice;
+                document.getElementById("balance").innerHTML += "<p> Purchase amount: $" + itemPrice +".New Balance: $" + balance + ". </p>";}
+            }
+            
+            document.getElementById("balance").innerHTML += "<p> You bought: " + itemsBought + " items.</p>";
+        }
+              
+//        whilst balance is above 0 then a random number between 0 and 1 x 100 so 0 and 100 which be shown - placed in the Math.floor code to make sure it is an integer and not a decimal number. If items bought is = to or more than 1 then the Balance goes down by that item's price. documentid balance paragraph then changes the innerhtml by adding purchase amount and price and then displays the new balance as it goes down each time.
+        
+        </script>
+    
+    
+    
+    
+    </body>
+    
+    
+    
+    </html>

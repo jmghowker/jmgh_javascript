@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>window and screen</title>
+    <style>
+    
+        #div1{
+            background-color: yellow;
+        }
+        
+        #div2{
+            background-color: aqua;
+        }
+    
+        #div3{
+            background-color: green;
+        }
+    
+        #div4{
+            background-color: lightpink;
+        }
+        
+        .equalBox{
+            float: left;
+            margin-left: 5px;
+        }
+        
+    </style>
+    </head>
+    <body>
+        
+        <div id="div1" class="equalBox">Div 1</div>
+        <div id="div2" class="equalBox">Div 2</div>
+        <div id="div3" class="equalBox">Div 3</div>
+        <div id="div4" class="equalBox">Div 4</div>
+        
+        
+    <script>
+    var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+//    window.alert(windowHeight);
+//        so it works for most browsers add the other two after the vertical lines
+        
+        
+    var screenWidth = window.screen.width;
+//        window.alert(screenWidth);
+        
+    
+    var availableScreenHeight =
+        window.screen.availHeight;
+//        window.alert(availableScreenHeight);
+//        inc/exc taskbar for instance
+    
+        
+    for(i=1; i<5; i++){
+    document.getElementById("div" +i).style.width = window.innerWidth/4-10 + "px";
+    document.getElementById("div" +i).style.height = window.innerHeight-10 + "px";
+    }
+    
+        
+        </script>
+    
+    
+    
+    
+    </body>
+    
+    
+    
+    </html>

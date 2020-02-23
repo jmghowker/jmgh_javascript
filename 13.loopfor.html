@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>loop for</title>
+    </head>
+    <body>
+    <p id="myParagraph">Javascript</p>
+    <script>
+//       document.getElementById("myParagraph").innerHTML += "<br />" + 0;
+//        document.getElementById("myParagraph").innerHTML += "<br />" + 1;
+//        document.getElementById("myParagraph").innerHTML += "<br />" + 2;
+//        document.getElementById("myParagraph").innerHTML += "<br />" + 3;
+//        document.getElementById("myParagraph").innerHTML += "<br />" + 4;
+//        instead of keep repeating the above line of code and changing the number we can use for (below) for hundreds of numbers for example.
+//    
+        for(i=0; i<5; i++){
+            document.getElementById("myParagraph").innerHTML += "<br />" + i;
+            
+        }
+        
+//        next to the for keyword in the parenthesis states we're starting with i=0, we will be wanting numbers up to/not including 101 to be displayed, and i++ means like 1+1 and that is what the numbers will go up in
+        
+        for(i=7; i>0; i--){
+        document.getElementById("myParagraph").innerHTML += "<br />" + Math.pow(i,2);   
+            
+        }
+//        here we have/start with 7 squared, making sure numbers stay above 0, going down by one hence the -- and not ++ so next is 6 squared then 5 squared and so on
+        
+        
+        var shoppingList = ["bread", "milk", "eggs"];
+       for(i=0; i<shoppingList.length; i++){
+           document.getElementById("myParagraph").innerHTML += "<br />" + shoppingList[i];
+    
+}
+        
+        var numberList = [1, 2, 3];
+        for(i=0; i<numberList.length; i++){
+            numberList[i] += 10;
+        }
+        
+        document.getElementById("myParagraph").innerHTML += "<br />" + numberList;  
+//            for this list we start with the first item index which is 0 so i=0, then the numberList.length is 1,2,3 so it will have 3 numbers like that and the i++, means that the list will go up by 1 each time, in the numberlist[i] += 10 means that each index will go up by 10 which shows in the window as 11,12,13.
+            
+    </script>
+    
+    
+    
+    
+    </body>
+    
+    
+    
+    </html>
